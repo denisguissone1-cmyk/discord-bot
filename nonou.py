@@ -7,6 +7,7 @@ from discord.ui import Select, View, Button
 from discord.utils import get
 from discord.ext import commands
 import time
+import os
 # =============================================
 # CONFIGURAÇÕES GLOBAIS E CONSTANTES
 # =============================================
@@ -1085,4 +1086,4 @@ async def sync(interaction: discord.Interaction):
     await aclient.tree.sync()
     await interaction.followup.send("Comandos sincronizados!")
 
-aclient.run('OTAwMDk2NjAzOTI1NDA1NzU2.GLqQRr.ZKJEWvYYvrY-Q0sfi2FE0Dz1I0infDvbe75s6w')
+aclient.run(os.getenv("DISCORD_TOKEN"))
